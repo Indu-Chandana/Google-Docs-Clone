@@ -22,6 +22,25 @@ function Header() {
                 <Icon name="search" size="3xl" color="gray"/>
                 <input type="text" className=" bg-transparent flex-grow px-5 text-base outline-none" placeholder="Search"/> 
             </div>
+
+            <Button
+            color="gray"
+            buttonType="outline"
+            rounded={true}
+            iconOnly={true}
+            ripple="dark"
+            className="hidden md:inline-flex ml-5 md:ml-20 h-20 w-20 border-0"
+            >
+                <Icon name="apps" size="3xl" color="gray"/>
+            </Button>
+
+            <img
+            loading="lazy"
+            // onClick={signOut}
+            className=" cursor-pointer h-12 w-12 rounded-full ml-2"
+            src="https://th.bing.com/th/id/OIP.4Py7MYDlJMhMjiA_gELNdAHaGh?pid=ImgDet&rs=1"
+            alt=""
+            />
         </div>
     )
 }
