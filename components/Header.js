@@ -37,20 +37,21 @@ function Header() {
                 <Icon name="apps" size="3xl" color="gray"/>
             </Button>
 
-            <img
+            {/* <img
             loading="lazy"
             onClick={signOut}
             className=" cursor-pointer h-12 w-12 rounded-full ml-2"
             src={session.user.image}
             alt=""
-            />
-
-            {/* <Image
-            src={session.user.image}
-            height="20"
-            width="20"
-            className=" cursor-pointer rounded-full ml-2"
             /> */}
+
+            <Image
+            onClick={signOut}
+            src={session.user.image}
+            height="40"
+            width="40"
+            className=" cursor-pointer rounded-full ml-2"
+            />
         </div>
     )
 }
