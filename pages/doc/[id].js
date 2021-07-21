@@ -1,5 +1,5 @@
 import Icon from "@material-tailwind/react/Icon";
-import { useSession } from "next-auth/client"
+import { getSession, useSession } from "next-auth/client"
 import { useRouter } from "next/dist/client/router";
 import Login from "../../components/Login";
 import {db} from "../../firebase"
@@ -34,7 +34,7 @@ function Doc() {
                 </span>
 
                 <div className=" flex-grow px-2">
-                    <h2>{snapshot?.data()?.fileName}</h2>
+                    <h2>{loadingSnapshot? "loarding..." : snapshot?.data()?.fileName}</h2>
                     <div className="flex items-center text-sm space-x-2 -ml-1
                     text-gray-600 h-8">
                         <p className="option">File</p>
@@ -76,3 +76,15 @@ function Doc() {
 }
 
 export default Doc
+
+//we use secondly this code this is a page folder file first we use only components forder now we wont to use in [id].js 
+export async function getServerSideProps(context) {
+    const session = await getSession(context)
+
+    return {
+        props: {
+            session
+        }
+    }
+}
+
