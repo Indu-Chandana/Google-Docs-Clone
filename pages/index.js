@@ -15,6 +15,7 @@ import {
   useCollectionOnce
 } from 'react-firebase-hooks/firestore';
 import DocumentRow from '../components/DocumentRow';
+import DocumentRows from '../components/DocumentRows';
 
 export default function Home() {
   const [session] = useSession();
@@ -22,12 +23,13 @@ export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
   const [input, setInput] = useState("");
-  const [snapshot] = useCollectionOnce(
-    db
-    .collection('userDocs')
-    .doc(session.user.email)
-    .collection('docs')
-    .orderBy('timestamp', 'desc'))
+  // *This method do not support Realtime*
+  // const [snapshot] = useCollectionOnce(
+  //   db
+  //   .collection('userDocs')
+  //   .doc(session.user.email)
+  //   .collection('docs')
+  //   .orderBy('timestamp', 'desc'))
 
 
   const createDocument = () => {
@@ -119,6 +121,7 @@ export default function Home() {
               <Image src="https://links.papareact.com/pju" 
               alt="" 
               layout="fill"
+              className=" animate-pulse"
               />
             </div>
 
@@ -135,7 +138,7 @@ export default function Home() {
             <Icon name="folder" size="3xl" color="gray"/>
           </div>
         
-
+         {/* **This part do not support Realtime**
         {snapshot?.docs.map(doc => (
           <DocumentRow 
           key={doc.id}
@@ -143,7 +146,11 @@ export default function Home() {
           fileName={doc.data().fileName}
           date={doc.data().timestamp}
           />
-        ))}
+        ))} */}
+
+        {/* we can use that method for realtime */}
+        <DocumentRows/>
+
         </div>
       </section>
       

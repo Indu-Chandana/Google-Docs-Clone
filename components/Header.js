@@ -14,14 +14,14 @@ function Header() {
             rounded={true}
             iconOnly={true}
             ripple="dark"
-            className=" hidden md:inline-flex h-20 w-20 border-none"
+            className=" hidden md:inline-flex h-20 w-20 border-none "
             >
                 <Icon name="menu" size="3xl"/>
             </Button>
             <Icon name="description" size="5xl" color="blue"/>
             <h1 className=" mx-5 md:mx-20 hidden md:inline-flex ml-2 text-gray-700 text-2xl">Docs</h1>
 
-            <div className="flex flex-grow items-center px-5 py-2 bg-gray-100 text-gray-600 rounded-xl  focus-within:text-gray-600 focus-within:shadow-md">
+            <div className="flex flex-grow items-center px-5 py-2 bg-gray-100 text-gray-600 rounded-xl  focus-within:text-gray-600 focus-within:shadow-md mr-2">
                 <Icon name="search" size="3xl" color="gray"/>
                 <input type="text" className=" bg-transparent flex-grow px-5 text-base outline-none" placeholder="Search"/> 
             </div>
