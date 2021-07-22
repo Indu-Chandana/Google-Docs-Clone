@@ -107,7 +107,7 @@ export default function Home() {
               buttonType="outline"
               iconOnly={true}
               ripple="dark"
-              className="border-0"
+              className="border-none"
             >
               <Icon name="more_vert" size="3xl"/>
             </Button>

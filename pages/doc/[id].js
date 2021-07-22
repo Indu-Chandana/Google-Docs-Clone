@@ -12,11 +12,13 @@ function Doc() {
     if(!session) return <Login/>;
 
     const router = useRouter();
+
+    // we define what is id, where it comming from
     const { id } = router.query;
 
     const [snapshot, loadingSnapshot] = useDocumentOnce(
         db.collection('userDocs').doc(session.user.email).collection
-        ('docs').doc(id));
+        ('docs').doc(id)); //that id comming from url that is router.query
 
     // redirect if anther user tries to access a URL they do not have aceess to..
     if(!loadingSnapshot && !snapshot?.data()?.fileName){
@@ -54,7 +56,7 @@ function Doc() {
                 className="hidden md:inline-flex h-10 mr-5"
                 rounded={false}
                 block={false}
-                IconOnly={false}
+                iconOnly={false}
                 ripple="light"
                 >
                     <Icon name="people" size="md"/> share
