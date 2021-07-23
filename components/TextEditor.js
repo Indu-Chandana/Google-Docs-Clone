@@ -14,7 +14,7 @@ import { useDocumentOnce } from "react-firebase-hooks/firestore";
 //this time do not do normal import we do dynamic import, why we use normal import we can get error "window ....", client can  access to the window object but server can't access to the window object. that's why we can get error. more details watch 07/21 date.
 const Editor = dynamic(() => import("react-draft-wysiwyg").then((module) => module.Editor), 
     {
-        ssr: false, //server side false
+        ssr: false, //server side render false
     }
 );
 
