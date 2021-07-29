@@ -1,10 +1,10 @@
 
 🔥 ReactJS - NextJS - Tailwindcss - Material UI - Firebase - Firestore - NextAuth - DraftJS - Serverside rendering
 
-#### 👉 This project is creating Facebook Clone with Realtime functionality. ####
-#### 👉 Storing the information of Posts and Messages in Realtime Cloud Firebase Storage API. ####
+#### 👉 This project is creating Google-Docs Clone with Realtime functionality. ####
+#### 👉 Draft.js use to building rich text editors ####
 #### 👉 NextJS help for Server-side rendering and responsive design. ####
-#### 👉 Next Authentication to power up Facebook and Google authentication. ####
+#### 👉 Next Authentication to power up Google authentication. ####
 
 
 
